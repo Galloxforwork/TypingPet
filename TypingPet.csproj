@@ -9,4 +9,7 @@
     <AssemblyName>TypingPet</AssemblyName>
     <RootNamespace>TypingPet</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AntdUI" Version="2.4.12" />
+  </ItemGroup>
 </Project>

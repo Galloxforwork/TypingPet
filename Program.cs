@@ -8,6 +8,7 @@ internal static class Program
     private static void Main()
     {
         ApplicationConfiguration.Initialize();
+        AntdUI.Config.IsLight = true;
         using var singleInstance = new Mutex(true, @"Local\TypingPet.SingleInstance", out var firstInstance);
         if (!firstInstance)
         {
