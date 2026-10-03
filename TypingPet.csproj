@@ -7,7 +7,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>TypingPet</AssemblyName>
+    <ApplicationIcon Condition="'$(ShareBuild)' != 'true'">TypingPet.Personal.ico</ApplicationIcon>
     <RootNamespace>TypingPet</RootNamespace>
+    <Version>0.7.0</Version>
+    <FileVersion>0.7.0.0</FileVersion>
+    <InformationalVersion>Ver.0.7</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Authors>NNNNNTK</Authors>
+    <Company>NNNNNTK</Company>
+    <Copyright>Copyright © 2026 NNNNNTK</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AntdUI" Version="2.4.12" />

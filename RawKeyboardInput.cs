@@ -103,7 +103,8 @@ internal sealed class RawKeyboardInput : NativeWindow, IDisposable
                 ActionReceived?.Invoke(KeyboardAction.BackspaceDown, _capsDown);
                 return;
             }
-            if (IsCharacterKey(virtualKey)) ActionReceived?.Invoke(KeyboardAction.Typing, _capsDown);
+            if (IsCharacterKey(virtualKey))
+                ActionReceived?.Invoke(virtualKey == (ushort)Keys.Space ? KeyboardAction.Space : KeyboardAction.Typing, _capsDown);
         }
         finally
         {
@@ -162,4 +163,4 @@ internal sealed class RawKeyboardInput : NativeWindow, IDisposable
     private static extern uint GetRawInputData(IntPtr rawInput, uint command, IntPtr data, ref uint size, uint headerSize);
 }
 
-internal enum KeyboardAction { Typing, BackspaceDown, BackspaceUp, EnterDown, EnterUp, CapsChanged, ShiftDown, ShiftUp }
+internal enum KeyboardAction { Typing, Space, BackspaceDown, BackspaceUp, EnterDown, EnterUp, CapsChanged, ShiftDown, ShiftUp }

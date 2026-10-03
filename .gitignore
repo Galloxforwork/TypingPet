@@ -4,4 +4,8 @@ obj/
 *.user
 *.suo
 *.tmp
+*.bak*
 /release/*.zip
+/data/
+/分享给朋友/
+/local-archive/
